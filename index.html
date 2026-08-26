@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BuildPro — Commercial Construction Supply Hub</title>
+<meta name="description" content="BuildPro commercial construction materials marketplace prototype.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="tool">🧰 J & Trade Kits</div>
+  <div class="tool">📄 RFQ & Custom Project Bids</div>
+  <div class="tool">🔑 Material Takeoff Calculators</div>
+  <div class="tool">🚚 Jobsite Staging Logistics</div>
+  <div class="tool active">📋 Strategic Platform Blueprint & Plan <b>DOCS</b></div>
+</div>
+
+<div class="experience">
+  <div style="display:flex;align-items:center;gap:10px">
+    <b>Active Shopping Experience:</b>
+    <div class="switch"><button id="d2cBtn">🛍 D2C / Homeowner</button><button id="b2bBtn" class="active">🏗 B2B Commercial Pro <small>Wholesale</small></button></div>
+  </div>
+  <div class="location">📍 <span id="locationText">Central Industrial Yard (Dallas, TX)</span>⌄</div>
+  <div>Support & Specs</div>
+</div>
+
+<header class="header">
+  <div class="brand">
+    <div class="brand-mark">▥</div>
+    <div><div class="brand-name">BUILD<span>PRO</span> <span class="tag">COMMERCIAL PRO</span></div><div class="subtitle">Dual-Market Construction, Materials & Equipment Hub</div></div>
+  </div>
+  <div class="search"><span>⌕</span><input id="search" placeholder="Search by SKU, ASTM Spec, product or trade…"><span>⌘K</span></div>
+  <button class="header-btn primary" id="rfqTop">📄 RFQ Builder <span class="badge" id="rfqCount">0</span></button>
+  <button class="header-btn">♙ Pro Hub</button>
+  <button class="cart-btn" id="openCart">🛒 <span id="cartTotal">$0.00</span></button>
+</header>
+
+<nav class="nav">
+  <button class="active">▦ Product Catalog</button>
+  <button>🧩 Bulk SKU & Trade Kits</button>
+  <button id="rfqNav">📄 RFQ & Custom Project Bids</button>
+  <button>🔧 Material Takeoff Calculators</button>
+  <button>🚚 Jobsite Staging Logistics</button>
+  <button>📋 Strategic Platform Blueprint & Plan</button>
+</nav>
+
+<main class="container">
+  <section class="account">
+    <div class="account-icon">🏗</div>
+    <div>
+      <h3>Commercial B2B Contractor Tier: <span class="tag">ELITE CONTRACTOR</span></h3>
+      <p><strong>18%–48% Wholesale Tier Pricing Unlocked</strong> &nbsp; • &nbsp; 🛡 Terms: Net 30 (Avail: $107,700) &nbsp; • &nbsp; 🧾 Tax-Exempt Resale Certificate Active</p>
+    </div>
+    <div class="account-actions"><button>Pro Portal</button><button class="secondary" id="switchMode">⇄ Switch to D2C Retail Mode</button></div>
+  </section>
+
+  <div class="section-head">
+    <div><h2>Browse Building Departments <span class="count" id="foundCount">8 Products Found</span></h2></div>
+    <select class="filter" id="tradeFilter">
+      <option value="all">Trade Filter: All Trade Disciplines</option>
+      <option value="Lumber & Framing">Lumber & Framing</option>
+      <option value="Concrete & Masonry">Concrete & Masonry</option>
+      <option value="Roofing & Siding">Roofing & Siding</option>
+      <option value="Drywall & Insulation">Drywall & Insulation</option>
+      <option value="Paint & Waterproofing">Paint & Waterproofing</option>
+    </select>
+  </div>
+
+  <div class="categories" id="categories">
+    <button class="cat active" data-cat="all">▦ All Departments</button>
+    <button class="cat" data-cat="Lumber & Framing">⌂ Lumber & Framing</button>
+    <button class="cat" data-cat="Concrete & Masonry">▦ Concrete & Masonry</button>
+    <button class="cat" data-cat="Drywall & Insulation">▤ Drywall & Insulation</button>
+    <button class="cat" data-cat="Electrical & Lighting">ϟ Electrical & Lighting</button>
+    <button class="cat" data-cat="Plumbing & HVAC">⌁ Plumbing & HVAC</button>
+    <button class="cat" data-cat="Roofing & Siding">⌂ Roofing & Siding</button>
+    <button class="cat" data-cat="Paint & Waterproofing">▰ Paint & Waterproofing</button>
+  </div>
+
+  <section class="grid" id="productGrid"></section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><h4><span style="background:#ffad00;color:#16110a;padding:2px 5px;border-radius:3px">BUILDPRO</span> SUPPLY NETWORK</h4><p>High-capacity dual-market construction and industrial supply platform. Supplying homeowners, master trades, and commercial general contractors.</p></div>
+      <div><h4>COMMERCIAL PRO SERVICES</h4><ul><li>• Net 30/60 Revolving Trade Credit</li><li>• Automated Jobsite Moffett & Crane Delivery</li><li>• Direct CSV Material Takeoff Import</li><li>• Multi-User PO Approval Hierarchies</li></ul></div>
+      <div><h4>CONSUMER & DIY SOLUTIONS</h4><ul><li>• 2-Hour In-Store Locker Pickup</li><li>• Material Takeoff Project Calculators</li><li>• Step-by-Step Installation Guides</li><li>• Split 4-Payment Financing</li></ul></div>
+      <div><h4>TRADE DESK & YARDS</h4><p>Dispatch Line: <b>(800) 555-BUILD-PRO</b><br>Emergency Hotshot: <b>(214) 555-8940</b><br>Regional Distribution Hubs: Dallas, Houston, Phoenix, Atlanta, Chicago</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 BuildPro Dual-Market Supply Platform Inc. All rights reserved.</span><span>Strategic Blueprint Plan &nbsp; • &nbsp; Safety Data Sheets (SDS) &nbsp; • &nbsp; Toggle Mode (B2B)</span></div>
+  </footer>
+</main>
+
+<div class="drawer-backdrop" id="backdrop"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2>Shopping Cart</h2><button class="close" id="closeCart">✕</button></div>
+  <div class="cart-list" id="cartList"></div>
+  <div class="cart-total">
+    <div class="row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+    <div class="row"><span>Estimated freight</span><span id="freight">$0.00</span></div>
+    <div class="row grand"><span>Total</span><span id="grandTotal">$0.00</span></div>
+    <button class="checkout" id="checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+
+<div class="modal" id="rfqModal">
+  <div class="modal-box">
+    <div class="modal-head"><h2>RFQ & Custom Project Bid</h2><button class="close" id="closeRfq">✕</button></div>
+    <p style="color:#999;font-size:12px">Submit the selected SKUs, quantities and project requirements for a commercial quote.</p>
+    <div class="form-grid">
+      <label>Company / Contractor<input id="company" placeholder="Apex Commercial Builders LLC"></label>
+      <label>Project Name<input id="project" placeholder="Warehouse expansion"></label>
+      <label>Delivery Location<input id="delivery" placeholder="Jobsite address"></label>
+      <label>Required By<input id="requiredBy" type="date"></label>
+      <label class="full">Project Requirements<textarea id="requirements" placeholder="Scope, specifications, alternates, staging requirements…"></textarea></label>
+    </div>
+    <div class="modal-actions"><button id="cancelRfq">Cancel</button><button class="submit" id="submitRfq">Generate RFQ</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
